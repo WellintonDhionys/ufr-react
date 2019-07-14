@@ -1,0 +1,174 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+/*------------------------------------------------------------*/
+.titulo > h3 {
+	padding-top: 5px;
+	padding-left: 9px;
+    color: gainsboro;
+}
+
+.container-fluid {
+	height: 100%;
+	min-width: 300px;
+	position: absolute;
+	top: 0px;
+    bottom: 0px;
+}
+
+/* linha com coluna-menu e coluna-corpo dentro */
+#tamanho-row {
+	height: 91% !important;
+}
+
+#cabecalho {
+	background-color: #38414e;
+	height: 55px;
+}
+
+ul {
+	list-style: none;
+}
+
+/*------------------------------------------------------------*/
+#coluna-corpo {
+	height: 99%;
+	background-color: #eee;
+}
+
+.card {
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+.p-card {
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+/*------------------------------------------------------------*/
+.scrol {
+	background-color: #eee;
+	overflow: scroll;
+	height: 97%;
+	overflow: auto;
+}
+
+/*--------------------usado em coluna-menu--------------------*/
+.col-3 {
+	flex: 0 0 270px !important;
+	top: 0px !important;
+	transition: 0.5s !important;
+}
+
+/*--------------------usado em coluna-corpo-------------------*/
+.col-9 {
+	height: 100%;
+	flex: 75% !important;
+	max-width: none !important;
+}
+
+/*------------------------------------------------------------*/
+.tamanho-altura {
+	height: 91% !important;
+}
+
+#corMenu {
+    background-color: #333944;
+}
+
+/*------------------------------------------------------------*/
+.dropdown-user {
+	float: right !important;
+	padding-top: 7px;
+	right: 10px;
+}
+
+.toggle-user {
+	color: #FFFFFF;
+	background-color: #38414e;
+	border: none;
+}
+
+.toggle-user:hover {
+	background-color: #333944 !important;
+	border: none;
+}
+
+.show > .dropdown-toggle {
+	background-color: #333944 !important;
+	border: none !important;
+}
+.item {
+	color: #007bff;
+}
+
+.grafico {
+	width: 70%;
+}
+
+p {
+    font-size: 19px !important;
+	margin-top: 21px !important;
+	margin-left: 21px !important;
+    padding: 0px !important;
+    text-align: left !important;
+}
+
+span {
+	margin-right: 10px;
+}
+
+.cardCategoria {
+	height: 75px;
+	background-color: #fff;
+}
+
+.hamburger{
+	width: 25px;
+	height: 3px;
+	background-color: rgb(221, 221, 221);
+	margin: 3px 0;
+  }
+
+  .hamburger-button{
+	float: right;
+	cursor: pointer;
+	padding: 12px;
+	width: 37px;
+	right: 14px;
+	height: 30px;
+	border: 0px;   
+  }
+
+@media only screen and (max-width: 1000px) {
+	.col-3 {
+		-ms-flex: 0 0 25%;
+		transition: 0.5s;
+		flex: 0 0 50px !important;
+		max-width: 25%;
+	}
+
+	#menu > ul > li {
+		height: 50px;
+	}
+
+	span {
+		visibility: hidden;
+	}
+
+	span:hiden {
+		visibility: hidden;
+	}
+
+	p {
+		visibility: hidden;
+	}
+
+	.p-card {
+		flex: 50% !important;
+		max-width: 100% !important;
+	}
+}
