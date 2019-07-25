@@ -13,7 +13,7 @@ class Menu extends Component {
 					<ul>
 						<li>
 							<Link className="btn-cor" to="/components/Dashboard">
-							<i class="fas fa-tachometer-alt"></i>
+							<i className="fas fa-tachometer-alt"></i>
 								<span className={ spanToggle }>
 									Dashboard
 								</span>
@@ -21,13 +21,13 @@ class Menu extends Component {
 						</li>
 						<li>
 							<Link className="btn-cor" to="/components/Cadastro">
-							<i class="fas fa-cash-register"></i>
+							<i className="fas fa-cash-register"></i>
 								<span className={ spanToggle }>Cadastro</span>
 							</Link>
 						</li>
 						<li>
 							<Link className="btn-cor" to="/components/Conta">
-							<i class="fas fa-wallet"></i>
+							<i className="fas fa-wallet"></i>
 								<span className={ spanToggle }>Conta</span>
 							</Link>
 						</li>

@@ -1,5 +1,5 @@
-export const categoria = {
-    '001': {
+export const listCategoria = [
+    {
         nome: 'Alimentação',
         id: 0,
         subCat: [
@@ -8,7 +8,7 @@ export const categoria = {
             {nome: 'Outros'}
         ]
     },
-    '002': {
+    {
         nome: 'Transporte',
         id: 1,
         subCat: [
@@ -16,7 +16,7 @@ export const categoria = {
             {nome: 'Carro'}
         ]
     },
-    '003': {
+    {
         nome: 'Educação',
         id: 2,
         subCat: [
@@ -24,7 +24,7 @@ export const categoria = {
             {nome: 'Cursos'}
         ]
     },
-    '004': {
+    {
         nome: 'Casa',
         id: 3,
         subCat: [
@@ -32,7 +32,7 @@ export const categoria = {
             {nome: 'Cursos'}
         ]
     },
-    '005': {
+    {
         nome: 'Outros',
         id: 4,
         subCat: [
@@ -40,7 +40,7 @@ export const categoria = {
             {nome: 'Cursos'}
         ]
     }
-}
+]
 
 export const options = {
     title: {

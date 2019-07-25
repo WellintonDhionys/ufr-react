@@ -45,6 +45,12 @@ ul {
 	list-style: none;
 }
 
+.col-3 {
+	flex: 0 0 270px;
+	top: 0px !important;
+	transition: 0.5s !important;
+}
+
 .col-3-hide {
 	-ms-flex: 0 0 25%;
 	transition: 0.5s;
@@ -72,17 +78,8 @@ ul {
 		height: 50px;
 	}
 
-	span {
-		white-space: nowrap;
-		visibility: hidden;
-	}
-
-	span:hiden {
-		visibility: hidden;
-	}
-
-	p {
-		visibility: hidden;
+	.show-span {
+		display: none;
 	}
 
 	.p-card {

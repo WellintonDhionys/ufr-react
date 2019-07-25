@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Dropdown, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import  ListAcordion  from './acordion/Acordion';
-import Menu from './menu';
+import Menu from './menu/index';
+import Hamburger from './menu/hamburger';
+import DropdownUser from './dropdown/User';
 import './Dashboard.css';
 
 class Cadastro extends Component {
@@ -19,26 +21,12 @@ class Cadastro extends Component {
         return (
             <div className="container-fluid">
                 <div id="cabecalho" className="row">
-
-                <div class="hamburger-button" onClick={this.handleClick}>
-                    <div class="hamburger"></div>
-                    <div class="hamburger"></div>
-                    <div class="hamburger"></div>
-                </div>
-
+                    <div onClick={this.handleClick}>
+                        <Hamburger />
+                    </div>
                     <div className="col-3 titulo"><h3>Titulo</h3></div>
                     <div className="col">
-                        <Dropdown alignRight className="dropdown-user">
-                            <Dropdown.Toggle className="toggle-user" id="dropdown-basic">
-                                <i class="fas fa-user"></i>
-                            </Dropdown.Toggle>
-                               <Dropdown.Menu>
-                                <Dropdown.Item className="item"><i class="fas fa-user"></i>User</Dropdown.Item>
-                                <Dropdown.Item className="item"><i class="fas fa-cog"></i>Settings</Dropdown.Item>
-                                <Dropdown.Item className="item"><i class="fas fa-sign-out-alt"></i>Exit
-                                </Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
+                        <DropdownUser />
                     </div>
                 </div>
                 <div id="tamanho-row" className="row">

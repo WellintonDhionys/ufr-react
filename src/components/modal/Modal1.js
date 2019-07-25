@@ -26,7 +26,7 @@ class ModalSubcategoria extends React.Component {
       return (
         <>
             <Button variant="outline-primary" onClick={this.handleShow}>
-                <i class="fas fa-plus"></i>Adcionar
+                <i className="fas fa-plus"></i>Adcionar
             </Button>
   
           <Modal show={this.state.show} onHide={this.handleClose}>

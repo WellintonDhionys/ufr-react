@@ -6,32 +6,33 @@ class ModalCategoria extends React.Component {
     constructor(props, context) {
       super(props, context);
   
-      this.handleShow = this.handleShow.bind(this);
+      this.handleAdd = this.handleAdd.bind(this);
       this.handleClose = this.handleClose.bind(this);
   
       this.state = {
         show: false,
+        inputTex: ''
       };
     }
   
     handleClose() {
+      this.props.handleClick(false)
       this.setState({ show: false });
     }
   
-    handleShow() {
-      this.setState({ show: true });
+    handleAdd() {
+      this.inputTex == ''
+      ? this.props.handleClick(false)
+      : this.props.handleClick(this.inputTex.value)
+      this.setState({ show: false });
     }
   
     render() {
+      const { aberto } = this.props
       return (
         <>
-            <Button style={{margin: 14}} 
-              variant="primary float-right" 
-              onClick={this.handleShow}>
-                Nova Categoria
-            </Button>
   
-          <Modal show={this.state.show} onHide={this.handleClose}>
+          <Modal show={aberto} onHide={this.handleClose}>
             <Modal.Header closeButton>
               <Modal.Title>Adcionar Categoria</Modal.Title>
             </Modal.Header>
@@ -39,7 +40,7 @@ class ModalCategoria extends React.Component {
                 <Col>
                 <Form.Group controlId="exampleForm.ControlSelect1">
                     <Form.Label>Categoria</Form.Label>
-                    <Form.Control type="text" placeholder="Nome Categoria" />
+                    <Form.Control ref={(input) => this.inputTex = input} type="text" placeholder="Nome Categoria" />
                 </Form.Group>
                 </Col>
             </Modal.Body>
@@ -47,7 +48,7 @@ class ModalCategoria extends React.Component {
               <Button variant="secondary" onClick={this.handleClose}>
                 Fechar
               </Button>
-              <Button variant="primary" onClick={this.handleClose}>
+              <Button variant="primary" onClick={this.handleAdd}>
                 Adcionar
               </Button>
             </Modal.Footer>

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Dropdown, Card, Row, Col, Form, Tabs, Tab, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { categoria } from './acordion/dados';
-import Menu from './menu';
+import { Card, Row, Col, Form, Tabs, Tab, Button } from 'react-bootstrap';
+import { listCategoria } from './acordion/dados';
+import Menu from './menu/index';
+import Hamburger from './menu/hamburger';
+import DropdownUser from './dropdown/User';
 import './Dashboard.css';
 
 class Conta extends Component {
@@ -27,25 +28,12 @@ class Conta extends Component {
         return (
             <div className="container-fluid">
                 <div id="cabecalho" className="row">
-
-                <div class="hamburger-button" onClick={this.handleClick}>
-                    <div class="hamburger"></div>
-                    <div class="hamburger"></div>
-                    <div class="hamburger"></div>
-                </div>
-
+                    <div onClick={this.handleClick}>
+                        <Hamburger />
+                    </div>
                     <div className="col-3 titulo"><h3>Titulo</h3></div>
                     <div className="col">
-                        <Dropdown alignRight className="dropdown-user">
-                            <Dropdown.Toggle className="toggle-user" id="dropdown-basic">
-                                <i class="fas fa-user"></i>
-                            </Dropdown.Toggle>
-                               <Dropdown.Menu>
-                                <Dropdown.Item className="item"><i class="fas fa-user"></i>User</Dropdown.Item>
-                                <Dropdown.Item className="item"><i class="fas fa-cog"></i>Settings</Dropdown.Item>
-                                <Link to="/"><Dropdown.Item className="item"><i class="fas fa-sign-out-alt"></i>Exit</Dropdown.Item></Link>
-                            </Dropdown.Menu>
-                        </Dropdown>
+                        <DropdownUser />
                     </div>
                 </div>
                 <div id="tamanho-row" className="row">
@@ -67,8 +55,8 @@ class Conta extends Component {
                                         <Form.Control as="select" onChange={ this.handleSelected }>
                                         <option selected disabled>Selecione a Categoria</option>
                                         {
-                                            Object.keys(categoria).map(function(key){
-                                                return <option>{ categoria[key].nome }</option>
+                                            Object.keys(listCategoria).map(function(key){
+                                                return <option>{ listCategoria[key].nome }</option>
                                             })
                                         }
                                         </Form.Control>
@@ -79,9 +67,9 @@ class Conta extends Component {
                                         <Form.Label>Subcategoria</Form.Label>
                                         <Form.Control as="select">
                                         {
-                                            Object.keys(categoria).map(items => {
-                                                if (categoria[items].nome === this.state.selecionado){
-                                                    return categoria[items].subCat.map(key =>
+                                            Object.keys(listCategoria).map(items => {
+                                                if (listCategoria[items].nome === this.state.selecionado){
+                                                    return listCategoria[items].subCat.map(key =>
                                                         <option>{ key.nome }</option>)
                                                 }
                                             })

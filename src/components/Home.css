@@ -35,7 +35,7 @@
     color: aliceblue;
 }
 
-p {
+.footer > p {
     font-size: 19px;
     margin-top: 25px;
     padding: 20px;
