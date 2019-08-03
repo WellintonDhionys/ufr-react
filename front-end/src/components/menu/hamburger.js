@@ -4,10 +4,8 @@ class Hamburger extends Component {
 	render(){
 		return (
 			<div class="hamburger-button" onClick={this.handleClick}>
-                <div className="hamburger"></div>
-                <div className="hamburger"></div>
-                <div className="hamburger"></div>
-            </div>
+				<i class="fas fa-bars"></i>
+      </div>
 		);
 	}
 }

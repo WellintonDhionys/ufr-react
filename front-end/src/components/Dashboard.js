@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
-import  ListAcordion  from './acordion/Acordion';
+import { Row } from 'react-bootstrap';
+import { Route } from 'react-router-dom';
+import Cadastro from './cadastro/Cadastro';
+import Controle from './controle/Controle';
+import Conta from './conta/Conta';
 import Menu from './menu/index';
 import Hamburger from './menu/hamburger';
 import DropdownUser from './dropdown/User';
 import './Dashboard.css';
 
-class Cadastro extends Component {
+class Dashboard extends Component {
     state = { 
         menuAberto : true
     }
@@ -16,7 +19,7 @@ class Cadastro extends Component {
             menuAberto: this.state.menuAberto ? false : true
         })
     }
-    
+
     render() {
         return (
             <div className="container-fluid">
@@ -24,7 +27,7 @@ class Cadastro extends Component {
                     <div onClick={this.handleClick}>
                         <Hamburger />
                     </div>
-                    <div className="col-3 titulo"><h3>Titulo</h3></div>
+                    <div className="col-3 titulo"><h3>Titulos</h3></div>
                     <div className="col">
                         <DropdownUser />
                     </div>
@@ -33,11 +36,20 @@ class Cadastro extends Component {
 
                 <Menu aberto={this.state.menuAberto}/>
 
-                    <div id="coluna-corpo" className="col-9 p-card">
+                <div id="coluna-corpo" className="col-9 p-card">
                     <Row className="scrol">
-                        <Col style={{paddingRight: 5}}>
-                            <ListAcordion />
-                        </Col>
+                        <Route 
+                            path="/Dashboard/Controle" 
+                            component={Controle} 
+                        />
+                        <Route 
+                            path="/Dashboard/Cadastro" 
+                            component={Cadastro} 
+                        />
+                        <Route 
+                            path="/Dashboard/Conta" 
+                            component={Conta} 
+                        />
                     </Row>
                     </div>
                 </div>
@@ -46,4 +58,4 @@ class Cadastro extends Component {
     }
 }
 
-export default Cadastro;
+export default Dashboard;

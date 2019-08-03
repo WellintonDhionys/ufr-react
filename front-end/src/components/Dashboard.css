@@ -52,20 +52,20 @@ ul {
 .scrol {
 	background-color: #eee;
 	overflow: scroll;
-	height: 97%;
+	height: 100%;
 	overflow: auto;
 }
 
 /*--------------------usado em coluna-corpo-------------------*/
 .col-9 {
 	height: 100%;
-	flex: 75% !important;
+	flex: 50% !important;
 	max-width: none !important;
 }
 
 /*------------------------------------------------------------*/
 .tamanho-altura {
-	height: 91% !important;
+	height: 100% !important;
 }
 
 #corMenu {
@@ -119,19 +119,12 @@ span {
 	background-color: #fff;
 }
 
-.hamburger{
-	width: 25px;
-	height: 3px;
-	background-color: rgb(221, 221, 221);
-	margin: 3px 0;
-  }
-
   .hamburger-button{
 	float: right;
+	color: #fff;
 	cursor: pointer;
 	padding: 12px;
 	width: 37px;
-	right: 14px;
-	height: 30px;
-	border: 0px;   
+	height: 50px;
+	right: 14px;  
   }

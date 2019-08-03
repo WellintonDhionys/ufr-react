@@ -28,7 +28,7 @@ class Login extends Component {
   render(){
     return (
       <div>
-        <Form action="Dashboard">
+        <Form action="Dashboard/Controle">
           <Form.Group>
             <Form.Label>Nome:</Form.Label>
             <Form.Control

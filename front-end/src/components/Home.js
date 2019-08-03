@@ -11,7 +11,7 @@ function Home() {
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
                 industry. Lorem Ipsum has been the industry's standard 
                 dummy text ever since the 1500s, when an unknown printer.</p>
-                <Link className="btns" to="/components/Autenticar"> Começar </Link>
+                <Link className="btns" to="/Autenticar"> Começar </Link>
             </div>
         </div>
     );
